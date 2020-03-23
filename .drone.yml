@@ -35,7 +35,6 @@ steps:
     commands:
       - git config --global user.name "kite-bot"
       - git config --global user.email "kite-bot@heliostech.fr"
-      - git remote add authenticated-origin https://kite-bot:$GITHUB_API_KEY@github.com/${DRONE_REPO}
       - git fetch
       - echo "//registry.npmjs.org/:_authToken=$NPMJS_TOKEN" > .npmrc
       - sh scripts/version_bump.sh $NPM_LOGIN $NPM_PASS
